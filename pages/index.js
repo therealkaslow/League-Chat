@@ -1,5 +1,6 @@
 import appConfig from "../config.json";
 import { Box, Button, Text, TextField, Image } from "@skynexui/components";
+import react from "react";
 
 //isso é um componente react e tudo que funcionar dentro dele so fica dentro do escopo...
 
@@ -45,6 +46,7 @@ function TituloInicio(Props) {
           color: ${appConfig.theme.colors.primary["050"]};
           font-size: 25px;
           font-weight: 600;
+          backgroundcolor: ${appConfig.theme.colors.primary["500"]};
         }
       `}</style>
     </>
@@ -62,8 +64,8 @@ function TituloInicio(Props) {
 }
  */
 export default function PaginaInicial() {
-  const username = "therealkaslow";
-
+  /*   const username = "therealkaslow";
+   */ const [username, setUsername] = react.useState("");
   return (
     <>
       <GlobalStyle />
@@ -101,6 +103,10 @@ export default function PaginaInicial() {
           {/* Formulário */}
           <Box
             as="form"
+            onSubmit={function (eventinfo){
+              eventinfo.preventDefault();
+              console.log('Alguém submeteu o form');
+            }}
             styleSheet={{
               display: "flex",
               flexDirection: "column",
@@ -120,8 +126,26 @@ export default function PaginaInicial() {
             >
               {appConfig.name}
             </Text>
-
+            {/*             <input
+              type="text"
+              value={username}
+              onChange={function (event) {
+                console.log("usuario digitou", event.target.value);
+                const valor = event.target.value;
+                // trocar o valor da variavel
+                setUsername(valor);
+                //essa função só é executada quando o usuario digita
+              }}
+            /> */}
             <TextField
+              value={username}
+              onChange={function (event) {
+                console.log("usuario digitou", event.target.value);
+                const valor = event.target.value;
+                // trocar o valor da variavel
+                setUsername(valor);
+                //essa função só é executada quando o usuario digita
+              }}
               fullWidth
               textFieldColors={{
                 neutral: {
@@ -155,8 +179,7 @@ export default function PaginaInicial() {
               maxWidth: "200px",
               padding: "16px",
               backgroundColor: appConfig.theme.colors.primary[500],
-              border: "1px solid",
-              borderColor: appConfig.theme.colors.neutrals[999],
+              borderColor: appConfig.theme.colors.primary["050"],
               borderRadius: "10px",
               flex: 1,
               minHeight: "240px",
