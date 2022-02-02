@@ -1,39 +1,9 @@
 import appConfig from "../config.json";
 import { Box, Button, Text, TextField, Image } from "@skynexui/components";
 import react from "react";
+import { useRouter } from 'next/router';
 
 //isso é um componente react e tudo que funcionar dentro dele so fica dentro do escopo...
-
-function GlobalStyle() {
-  return (
-    <style global jsx>{`
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        list-style: none;
-      }
-      body {
-        font-family: "Open Sans", sans-serif;
-      }
-      /* App fit Height */
-      html,
-      body,
-      #__next {
-        min-height: 100vh;
-        display: flex;
-        flex: 1;
-      }
-      #__next {
-        flex: 1;
-      }
-      #__next > * {
-        flex: 1;
-      }
-      /* ./App fit Height */
-    `}</style>
-  );
-}
 
 function TituloInicio(Props) {
   console.log(Props.children);
@@ -56,7 +26,6 @@ function TituloInicio(Props) {
 /* function HomePage() {
   return (
     <div>
-      <GlobalStyle/>
       <TituloInicio tag="h2">Boas vindas de volta</TituloInicio>
       <h3>Bem vindo ao Chat do LoL</h3>
     </div>
@@ -65,10 +34,10 @@ function TituloInicio(Props) {
  */
 export default function PaginaInicial() {
   /*   const username = "therealkaslow";
-   */ const [username, setUsername] = react.useState("");
+   */ const [username, setUsername] = react.useState("therealkaslow");
+      const roteamento = useRouter();
   return (
     <>
-      <GlobalStyle />
       <Box
         styleSheet={{
           display: "flex",
@@ -106,6 +75,8 @@ export default function PaginaInicial() {
             onSubmit={function (eventinfo){
               eventinfo.preventDefault();
               console.log('Alguém submeteu o form');
+              roteamento.push('/chat')
+/*               window.location.href = '/chat' */
             }}
             styleSheet={{
               display: "flex",
