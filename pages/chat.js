@@ -9,13 +9,13 @@ import { RiDeleteBinLine } from 'react-icons/ri';
 import {ButtonSendSticker} from '../src/components/ButtonSendSticker';
 import { createClient } from '@supabase/supabase-js';
 
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MzkwMjI2OCwiZXhwIjoxOTU5NDc4MjY4fQ.JojeqFRHGTaTJJaIhrtUrIM1YahWTIWD0fQtxQ3t_20';
-const SUPABASE_URL = 'https://flkedvzdhvtwoxelsqxc.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MzkxNjQ3NSwiZXhwIjoxOTU5NDkyNDc1fQ.k8vPmMUVagRQ0pFFLCHreokkezLQddDdVX7r3dxTaCk';
+const SUPABASE_URL = 'https://zrejqknlzcrrvyetqvuu.supabase.co';
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 function escutaMensagemEmTempoReal(adcionaMensagem){
     return supabaseClient
-        .from('mensagens')
+        .from('mensagem')
         .on('INSERT', ( respostaLive  ) =>{
             adcionaMensagem(respostaLive.new);
         })
@@ -82,7 +82,7 @@ export default function ChatPage() {
             <>
                 <Box styleSheet={{ width: '100%', display: 'flex',  alignItems: 'center', justifyContent: 'space-between' }} >
                     <Text variant='heading5'>
-                         KIK.MEIN { < BiCool />}  CHAT
+                         League { < BiCool />}  CHAT
                     </Text>
                     <Button
                         variant='tertiary'
@@ -117,7 +117,7 @@ export default function ChatPage() {
         <Box
             styleSheet={{
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                backgroundImage: 'url(/img/gwen.png)',
+                backgroundImage: 'url(https://images4.alphacoders.com/600/600528.png)',
                 backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundBlendMode: 'multiply',
                 color: appConfig.theme.colors.neutrals['000']
             }}
