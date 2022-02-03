@@ -9,8 +9,8 @@ import { RiDeleteBinLine } from 'react-icons/ri';
 import {ButtonSendSticker} from '../src/components/ButtonSendSticker';
 import { createClient } from '@supabase/supabase-js';
 
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MzMyNDU2OCwiZXhwIjoxOTU4OTAwNTY4fQ.JymWTWhqavsTnjJG2ZbTaWYrPZAC37mYcAUL1Xo-1Ig';
-const SUPABASE_URL = 'https://buuwsykmomaefgmiiluv.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MzkwMjI2OCwiZXhwIjoxOTU5NDc4MjY4fQ.JojeqFRHGTaTJJaIhrtUrIM1YahWTIWD0fQtxQ3t_20';
+const SUPABASE_URL = 'https://flkedvzdhvtwoxelsqxc.supabase.co';
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 function escutaMensagemEmTempoReal(adcionaMensagem){
