@@ -15,7 +15,7 @@ const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 function escutaMensagemEmTempoReal(adcionaMensagem){
     return supabaseClient
-        .from('mensagem')
+        .from('mensagens')
         .on('INSERT', ( respostaLive  ) =>{
             adcionaMensagem(respostaLive.new);
         })
