@@ -1,7 +1,4 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="League Chat" />
-
-  &#xa0;
 
    <a href="https://league-chat.vercel.app">App</a> 
 </div>
@@ -81,9 +78,6 @@ $ yarn dev
 ## :memo: License ##
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
-
-
-Made with :heart: by <a href="https://github.com/{{therealkaslow}}" target="_blank">{{therealkaslow}}</a>
 
 &#xa0;
 
