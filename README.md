@@ -13,8 +13,8 @@
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#memo-license">Licensa</a> &#xa0; | &#xa0;
-  <a href="https://github.com/{{therealkaslow}}" target="_blank">therealkaslow</a>
-  <a href="https://github.com/{{gc-barros}}" target="_blank">gc_barros</a>
+  <a href="https://github.com/therealkaslow" target="_blank">therealkaslow</a>
+  <a href="https://github.com/gc-barros" target="_blank">gc_barros</a>
 </p>
 
 <br>
