@@ -1,10 +1,3 @@
-<div align="center" id="top"> 
-
-	<h3> Link do Projeto 
-   <a href="https://league-chat.vercel.app">App</a> 
-	</h3>
-</div>
-
 <h1 align="center">League Chat</h1>
 
 <p align="center">
@@ -26,7 +19,7 @@
 <!-- Status -->
 
  <h4 align="center"> 
-	🚧  SQL Dictionary 🚀 Em Construção...  🚧
+	🚧  League Chat 🚀 Em Construção...  🚧
 </h4> 
 
 <hr> 
@@ -83,4 +76,4 @@ This project is under license from MIT. For more details, see the [LICENSE](LICE
 
 &#xa0;
 
-<a href="#top">Back to top</a>
+<a href="#top">Inicio</a>
